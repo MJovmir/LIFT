@@ -11,7 +11,7 @@
 # HW5* add code se when the lift arrives -> human exists
 from os import system 
 from time import sleep
-DIR_UP   = -1
+DIR_UP = -1
 DIR_STOP = 0
 DIR_DOWN = 1
 
@@ -68,16 +68,15 @@ while True:
     
     else:
         lift_target_floor = lift_floor
-    
-            
+         
     lift_open = False    
        
     if lift_floor < lift_target_floor:
-        speed = +1
-        lift_dir == DIR_UP
+        speed = + 1
+        lift_dir = DIR_UP
     if lift_floor > lift_target_floor:
-        speed = -1
-        lift_dir == DIR_DOWN
+        speed = - 1
+        lift_dir = DIR_DOWN
     if lift_floor == lift_target_floor:
         speed = 0
         
@@ -92,10 +91,11 @@ while True:
                 
               
                 lift_open = True
-                lift_dir == DIR_STOP
+                lift_dir = DIR_STOP
                     
                 if human_in_lift:
                     human_in_lift = False
+                    human_floor= lift_floor
                 else:
                     human_in_lift= True
 
@@ -107,8 +107,8 @@ while True:
             print(        "---|-----|----")
             print(        " R |     |    ")
 # HW1   
-        if lift_open == True:
-            print(       f" R |{a}|    ")
+        # if lift_open == True:
+        #     print(       f" R |{a}|    ")
         else:
             print(        "---|-----|----")
 

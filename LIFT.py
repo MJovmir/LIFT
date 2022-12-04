@@ -164,7 +164,7 @@ while True:
             print(        "---|-----|----")
         ###############################  RENDER FRAME #################################
         sleep(1)
-        if lift_floor != lift_target_floor:
+        if lift_floor == lift_target_floor:
             break
     ############## ANIMATION  #################################
     sleep(.5)
